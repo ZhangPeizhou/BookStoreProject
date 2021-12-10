@@ -23,7 +23,7 @@ PostgreSQL;
 Download "Base_Code", "SQL" from GitHub.
 
 - Preparation:
-Restore the "BookStoreProjectDB" using pgAdmin or PostgreSQL.
+Restore the "BookStoreProjectDB.sql" using pgAdmin or PostgreSQL.
 Open command line on Base_Code folder and type: npm i
 
 - Run the application:
