@@ -12,12 +12,12 @@ https://youtu.be/iRg-DBWpNJo
 https://github.com/ZhangPeizhou/BookStoreProject.git
 
 - Software/tools/techniques used:
-html/ javascript/ css
-Node
-Express
-express-session
-pug
-PostgreSQL
+html/ javascript/ css;
+Node;
+Express;
+express-session;
+pug;
+PostgreSQL;
 
 - Download:
 Download "Base_Code", "DataBase" from GitHub.
@@ -27,5 +27,5 @@ Restore the "BookStoreProjectDB" using pgAdmin or PostgreSQL.
 Open command line on Base_Code folder and type: npm i
 
 - Run the application:
-Open command line and type: node index.js
+Open command line and type: node index.js. 
 Go to the given url ( http://localhost:3000 ).
