@@ -1,0 +1,15 @@
+html 
+body 
+    script(src="functions.js")
+    a(href='/owner') |-- Back to Search --|
+    a(href='/') |-- Log Out --|
+    a(href='/authorshare') |-- Author Share --|
+    br
+    br
+    lable Author Name: (required)
+    input#name(type="text" size="20")
+    br
+    lable Phone Number: 
+    input#phone(type="text" size="20")
+    br
+    button(onclick="AddAuthor()") Add Author

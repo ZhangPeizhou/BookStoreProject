@@ -1,0 +1,18 @@
+ok  - A user can search the bookstore by book name, author name, ISBN, genre, etc.. 
+ok  - A user can select as many books as she likes to be added to the checkout basket. 
+ok  - A user needs to be registered in the bookstore to be able to checkout. 
+ok  - When checking out, the user inserts billing and shipping information, and completes the order. 
+ok  - The bookstore has the feature of tracking an order via an order number. 
+ok  - A user can use this order number to track where the order is currently. 
+ok  - The bookstore owners can add new books to their collections, or remove books from their store. 
+ok  - The banking account for publishers is used to transfer a percentage of the sales of books published by these publishers. This percentage
+ok      is variable and changes from one book to another. 
+ok  - The owners should have access to reports that show sales vs. expenditures, sales per genres, sales per author, etc.. 
+ok  - The application should also be able to automatically place orders for new books if the remaining quantity is less than a given threshold 
+ok  (e.g., 10 books). This is done by sending an email to the publisher of the limited books to order a number of books equal to how many books 
+ok  were sold in the previous month (you do not have to implement the email sending component).
+    - owner can see all previous orders
+
+BONUS:
+ok  - registration of new owners
+ok  - registration of new customer

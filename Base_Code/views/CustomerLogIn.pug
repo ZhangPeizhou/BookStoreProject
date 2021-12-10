@@ -1,0 +1,14 @@
+html 
+head 
+    title Customer Log In 
+body 
+    script(src="functions.js")
+    a(href='/') |-- HomePage --|
+    p Username: 
+    input#username(type="text" value="Customer123")
+    br
+    p Password: 
+    input#password(type="text" value="123456")
+    br
+    br
+    button(onclick="CLog()") Log In

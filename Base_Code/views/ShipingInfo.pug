@@ -1,0 +1,24 @@
+html 
+body
+    script(src="functions.js")
+    a(href='/customer') |--Return to Starch--|
+    a(href='/basket') |--Basket--|
+    a(href='/') |--Log Out--|
+    a(href='/previousOrder') |--Previous Order--|
+    a(href='/searchOrder') |--Search Order By Order ID--|
+    br
+    br
+    lable Send to Address (required):  
+    input#Saddress(type="text" value="A City B Street 101")
+    br
+    lable Billing Address: 
+    input#Baddress(type="text" value="A City B Street 101")
+    br
+    lable Phone Number: 
+    input#phone(type="text" value="101110707")
+    br
+    lable Bank Card Number (required): 
+    input#card(type="text" value="101110707")
+    br
+    br
+    button(onclick="placeOrder()") PlaceOrder

@@ -1,0 +1,28 @@
+html 
+body 
+    script(src='functions.js')
+    a(href='/customer') |--Return to Starch--|
+    a(href='/basket') |--Basket--|
+    a(href='/') |--Log Out--|
+    a(href='/previousOrder') |--Previous Order--|
+    a(href='/searchOrder') |--Search Order By Order ID--|
+    br
+    lable Order ID: 
+    input#orderID(type="text")
+    br
+    button(onclick="searchOrder()") Search
+    br
+    br
+    if(data.length==0)
+        h2 No Order Found 
+    else 
+        ul
+            each obj in data 
+                li
+                    lable=`Order ID: ${obj.order_id}`
+                    br
+                    lable=`Details: ${obj.details}`
+                    br
+                    lable=`Total Price: ${obj.tot_price}`
+                    br
+                    lable=`Current Location: ${obj.cur_location}`

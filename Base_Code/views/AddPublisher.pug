@@ -1,0 +1,24 @@
+html 
+body 
+    script(src="functions.js")
+    a(href='/owner') |-- Back to Search --|
+    a(href='/') |-- Log Out --|
+    a(href='/authorshare') |-- Author Share --|
+    br
+    br
+    lable Name: (required) 
+    input#name(type="text" size="20")
+    br
+    lable Email: 
+    input#email(type="text" size="20")
+    br
+    lable Address: 
+    input#address(type="text" size="20")
+    br
+    lable Phone Number: 
+    input#phone(type="text" size="20")
+    br
+    lable Bank Account: (required)
+    input#bank(type="text" size="20")
+    br
+    button(onclick="AddPublisher()") Add Publisher

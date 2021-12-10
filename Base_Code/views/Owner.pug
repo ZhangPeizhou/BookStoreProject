@@ -1,0 +1,40 @@
+html 
+body
+    script(src="functions.js")
+    a(href='/seereport') |-- Report --|
+    a(href='/owner') |-- Back to Search --|
+    a(href='/') |-- Log Out --|
+    a(href='/authorshare') |-- Author Share --|
+    a(href='/allorder') |-- Orders --|
+    br
+    lable Looking for book by: 
+    select#type
+        option(value='author_name') Author
+        option(value='title') Title 
+        option(value='isbn') ISBN
+        option(value='genre') Genre
+        option(value='price') Price
+        option(value='num_page') Number of Pages
+        option(value='publisher_name') Publisher
+    input#value(type="text")
+    button(onclick="OsearchBook()") Search
+    br
+    br
+    button(onclick="addBook()") Add Book to Book Store 
+    br
+    br
+    h3 Book List:
+    ul 
+        each book in data
+            li(id=book.book_id)=`ISBN: ${book.book_id}---Author: ${book.author_name}---Genre: ${book.genre}---Title: ${book.title}---Price: ${book.price}---Expense: ${book.expense}---Publisher: ${book.publisher_name}---Remain: ${book.num_remain}` 
+            button(onclick=`removeBook(${book.book_id})`) Remove from Book 
+    div#warning
+        if warning.length!=0
+            h3(style='color: red') Warning! These books will soon been sold out: 
+            ul
+                each obj in warning 
+                    li
+                        lable=`ISBN: ${obj.book_id}---Author: ${obj.author_name}---Genre: ${obj.genre}---Title: ${obj.title}---Price: ${obj.price}---Expense: ${obj.expense}---Publisher: ${obj.publisher_name}---Remain: ${obj.num_remain}`
+                        br
+                        lable=`Contact publisher by email: ${obj.publisher_email}`
+                        br

@@ -1,0 +1,40 @@
+html 
+    body 
+        script(src='functions.js')
+        a(href='/seereport') |-- Report --|
+        a(href='/owner') |-- Back to Search --|
+        a(href='/') |-- Log Out --|
+        a(href='/authorshare') |-- Author Share --|
+        a(href='/allorder') |-- Orders --|
+        br
+        lable Sales vs Expense Report: 
+        select#report
+            option(value='total') Total
+            option(value='author') Per Author 
+            option(value='genre') Per Genre 
+            option(value='book') Per Book
+        button(onclick='seeReport()') Submit
+        if(type=='total')
+            h3 Total Sales vs. Expenditures
+            p=`Total Sale: ${sale.sum} v.s. Total Expenditures: ${expense.sum}`
+        else if(type=='author')
+            h3 Sales vs. Expenditures Per Author
+            ul 
+                each s in sale 
+                    each e in expense
+                        if(s.author_id==e.author_id)
+                            li=`ID: ${s.author_id}, Name: ${s.author_name}, Sales: ${s.sum}, Expenditures: ${e.sum}`
+        else if(type=='genre')
+            h3 Sales vs. Expenditures Per Genre
+            ul 
+                each s in sale 
+                    each e in expense 
+                        if(s.genre==e.genre)
+                            li=`Genre: ${s.genre}, Sales: ${s.sum}, Expenditures: ${e.sum}`
+        else if(type=='book')
+            h3 Sales vs. Expenditures Per BOOK
+            ul 
+                each s in sale 
+                    each e in expense 
+                        if(s.book_id==e.book_id)
+                            li=`ID: ${s.book_id}, Title: ${s.title}, Sales: ${s.sum}, ExpenseExpenditures: ${e.sum}`

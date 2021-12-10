@@ -1,0 +1,14 @@
+html 
+    body
+        script(src="functions.js")
+        a(href='/seereport') |-- Report --|
+        a(href='/owner') |-- Back to Search --|
+        a(href='/') |-- Log Out --|
+        a(href='/authorshare') |-- Author Share --|
+        a(href='/allorder') |-- Orders --|
+        br
+        if data.length!=0
+            ul
+                each order in data
+                    li 
+                        p=`ID:${order.order_id}, Details: ${order.details}`

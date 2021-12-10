@@ -1,0 +1,32 @@
+html 
+body
+    script(src="functions.js")
+    a(href='/seereport') |-- Report --|
+    a(href='/owner') |-- Back to Search --|
+    a(href='/') |-- Log Out --|
+    a(href='/authorshare') |-- Author Share --|
+    a(href='/allorder') |-- Orders --|
+    br
+    lable Looking for book by: 
+    select#type
+        option(value='author_name') Author
+        option(value='title') Title 
+        option(value='isbn') ISBN
+        option(value='genre') Genre
+        option(value='price') Price
+        option(value='num_page') Number of Pages
+        option(value='publisher_name') Publisher
+    input#value(type="text")
+    button(onclick="OsearchBook()") Search
+    br
+    br
+    button(onclick="addBook()") Add Book to Book Store 
+    br
+    br
+    if(data.length==0)
+        h2 No Match 
+    else
+    ul 
+        each book in data
+            li(id=book.book_id)=`ISBN: ${book.book_id}---Author: ${book.author_name}---Genre: ${book.genre}---Title: ${book.title}---Price: ${book.price}---Number of Pages:_${book.num_page}---Publisher: ${book.publisher_name}---Remain: ${book.num_remain}`
+            button(onclick=`removeBook(${book_id})`) Remove from Book Store

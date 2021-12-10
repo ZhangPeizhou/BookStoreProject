@@ -1,0 +1,13 @@
+html 
+body 
+    script(src='functions.js')
+    a(href='/customer') |--Return to Starch--|
+    a(href='/basket') |--Basket--|
+    a(href='/') |--Log Out--|
+    a(href='/previousOrder') |--Previous Order--|
+    a(href='/searchOrder') |--Search Order By Order ID--|
+    br
+    lable Order ID: 
+    input#orderID(type="text")
+    br
+    button(onclick="searchOrder()") Search

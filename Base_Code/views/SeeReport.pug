@@ -1,0 +1,16 @@
+html 
+    body 
+        script(src='functions.js')
+        a(href='/seereport') |-- Report --|
+        a(href='/owner') |-- Back to Search --|
+        a(href='/') |-- Log Out --|
+        a(href='/authorshare') |-- Author Share --|
+        a(href='/allorder') |-- Orders --|
+        br
+        lable Sales vs Expense Report: 
+        select#report
+            option(value='total') Total
+            option(value='author') Per Author 
+            option(value='genre') Per Genre 
+            option(value='book') Per Book
+        button(onclick='seeReport()') Submit

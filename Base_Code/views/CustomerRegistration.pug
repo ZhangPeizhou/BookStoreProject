@@ -1,0 +1,12 @@
+html 
+    body 
+        script(src="functions.js")
+        a(href='/') |-- HomePage --|
+        p Username: 
+        input#username(type="text" value="Customer456")
+        br
+        p Password: 
+        input#password(type="text" value="456789")
+        br
+        br
+        button(onclick="CReg()") Register

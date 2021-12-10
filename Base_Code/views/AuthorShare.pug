@@ -1,0 +1,11 @@
+html 
+    body 
+        a(href='/seereport') |-- Report --|
+        a(href='/owner') |-- Back to Search --|
+        a(href='/') |-- Log Out --|
+        a(href='/authorshare') |-- Author Share --|
+        ul 
+            each row in data 
+                li
+                    p=`Author ID:${row.author_id}, Author Name:${row.author_name}, Publisher ID:${row.publisher_id}, Publisher Name:${row.publisher_name}`
+                    p=`Bank Account:${row.bank_account}, Amount:${row.sum}`

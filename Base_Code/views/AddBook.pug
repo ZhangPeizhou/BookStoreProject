@@ -1,0 +1,47 @@
+html 
+body 
+    a(href='/owner') |-- Back to Search --|
+    a(href='/') |-- Log Out --|
+    a(href='/authorshare') |-- Author Share --|
+    br
+    br
+    a(href='/addauthor') |-- Add Author --|
+    a(href='/addpublisher') |-- Add Publisher --|
+    br
+    br
+    script(src="functions.js")
+    lable=`ISBN: `
+    lable#book_id=`${data}`
+    br
+    lable Title: (required)
+    input#title(type="text" size="20")
+    br
+    lable Author: (required)
+    select#author
+        each author in authors 
+            option(value=author.author_id)=author.author_name 
+    br
+    lable Genre: (required)
+    input#genre(type="text" size="20")
+    br
+    lable Price: (required)
+    input#price(type="text" size="20")
+    br
+    lable Publisher: (required)
+    select#publisher
+        each publisher in publishers 
+            option(value=publisher.publisher_id)=publisher.publisher_name
+    br
+    lable Expense: (required)
+    input#expense(type="text" size='10')
+    br
+    lable How many you want to buy: (required)
+    input#num_tot_bought(type="text" size="20")
+    br
+    lable Number of Pages: 
+    input#num_page(type="text" size="10")
+    br
+    lable Transfer Rate: (required)
+    input#transfer(type="text" size="20")
+    br
+    button(onclick="addToStore()") Add to Store

@@ -1,0 +1,20 @@
+html 
+body 
+    script(src="functions.js")
+    a(href='/customer') |--Return to Starch--|
+    a(href='/basket') |--Basket--|
+    a(href='/') |--Log Out--|
+    a(href='/previousOrder') |--Previous Order--|
+    a(href='/searchOrder') |--Search Order By Order ID--|
+    br
+    if data.book_list==null 
+        h2 Basket is Empty 
+    else 
+        h3 List: 
+        ul 
+            each book in data.book_list 
+                li=book
+        h3 Sub_Total: 
+        p=data.price 
+        br
+        button(onclick="submitOrder()") Submit

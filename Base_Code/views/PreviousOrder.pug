@@ -1,0 +1,19 @@
+html 
+body 
+    a(href='/customer') |--Return to Starch--|
+    a(href='/basket') |--Basket--|
+    a(href='/') |--Log Out--|
+    a(href='/previousOrder') |--Previous Order--|
+    a(href='/searchOrder') |--Search Order By Order ID--|
+    br
+    if(data.length==0)
+        h2 No Order Yet 
+    else 
+        ul 
+            each obj in data 
+                li
+                    lable=`Order ID: ${obj.order_id}`
+                    br
+                    lable=`Details: ${obj.details}`
+                    br
+                    lable=`Total Price: ${obj.tot_price}`
