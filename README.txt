@@ -26,5 +26,5 @@ Restore the "BookStoreProjectDB" using pgAdmin or PostgreSQL.
 Open command line on Base_Code folder and type: npm i
 
 - Run the application:
-Open command line and type: node index.js
+Open command line and type: node index.js .
 Go to the given url ( http://localhost:3000 ).
