@@ -19,7 +19,7 @@ pug
 PostgreSQL
 
 - Download:
-Download "Base_Code", "SQL" from GitHub.
+Download "Base_Code", "DataBase" from GitHub.
 
 - Preparation:
 Restore the "BookStoreProjectDB" using pgAdmin or PostgreSQL.
