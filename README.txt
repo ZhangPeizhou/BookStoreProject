@@ -2,7 +2,7 @@
 Peizhou Zhang (101110707)
 
 - Topic: 
-This project is to use puG, Express and other common web development tools and PostgresQL database to build an online bookstore application. Users can enter the application as a "customer" or "owner" and complete some operations that should be performed in an online bookstore.
+This project is to use pug, Express and other common web development tools and PostgresQL database to build an online bookstore application. Users can enter the application as a "customer" or "owner" and complete some operations that should be performed in an online bookstore.
 
 - Project Demonstration: 
 https://youtu.be/iRg-DBWpNJo
